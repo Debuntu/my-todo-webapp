@@ -21,7 +21,7 @@ def add_todo():
 #in every iteration, checkbox will get a key, so to keep it unique, we named it as the todo,
 # as todo will be different in every iteration
 for index, todo in enumerate(todos):
-    checkbox = st.checkbox(todo, key=todo)
+    checkbox = st.checkbox(todo)
     if checkbox:
         todos.pop(index)
         functions.write_todos(todos)
@@ -29,6 +29,3 @@ for index, todo in enumerate(todos):
 
 #we are adding a call fucntion here to handle adding new todo, we defined the function add_todo earlier.
 st.text_input(label="", placeholder="Add a new todo...", on_change=add_todo, key="new_todo")
-
-#to experiment how the session state outputs value.     
-st.session_state                                        
