@@ -16,7 +16,7 @@ class TestFunctions(unittest.TestCase):
     def tearDown(self):
         # printing to check that the teardown function is getting called after running every test to set the defined values to zero for the next test.
         print("TEARDOWN CALLED...")
-        self.FILEPATH = 0
+        self.FILEPATH = " "
         self.todos_arg = ""
     """
     test the get-todos function from the functions library.
